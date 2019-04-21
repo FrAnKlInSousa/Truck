@@ -1,0 +1,15 @@
+﻿Pré-condições
+* Ter o Selenium WebDriver instalado (pode ser baixado no seguinte site: https://www.seleniumhq.org/download/).
+* Ter o navegador Mozilla Firefox instalado.
+* Ter o driver do Firefox instalado (pode ser baixado no seguinte site: https://github.com/mozilla/geckodriver/releases) - aconselho a baixar a versão v0.24.0.
+Ter uma IDE instalada (como Eclipse, por exemplo);
+
+Passo a passo
+1. Na unidade raiz (geralmente a unidade C:\), crie uma pasta e cole o driver do Firefox.
+2. Acesse a tela de variáveis de ambiente (para Windows):
+3. Propriedades de Meu Computador > Configurações avançadas do sistema > Variáveis de Ambiente...
+4. Dê um clique duplo na variável Path (tanto na seção de variáveis de usuário quanto na seção de variáveis do sistema), clique em Novo, informe o caminho da pasta criada no primeiro passo e salve.
+5. Em uma IDE, crie um projeto do tipo Maven e adicione os arquivos com os códigos (que estão no Github).
+	Obs.: Os arquivos estão compactados. Vai ser necessário descompactar.
+6. Para a página de login, executar a classe Login.java.
+7. Para a página de fretes, executar a classe Frete.java.
