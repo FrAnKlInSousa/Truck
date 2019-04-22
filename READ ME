@@ -13,3 +13,4 @@ Passo a passo
 	Obs.: Os arquivos estão compactados. Vai ser necessário descompactar.
 6. Para a página de login, executar a classe Login.java.
 7. Para a página de fretes, executar a classe Frete.java.
+	Obs.: Ambos os arquivos .java estão no diretório src/main/java
