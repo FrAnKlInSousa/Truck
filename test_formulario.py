@@ -1,5 +1,5 @@
 import formulario
-# test_login
+import pytest
 
 
 def test_login_admin():
@@ -24,3 +24,7 @@ def test_preenche_outros_docs():
 
 def test_add_contatos_pessoais():
     formulario.preenche_dados_pessoais()
+
+
+def test_add_contatos_ref():
+    formulario.preenche_contatos_ref()

@@ -97,7 +97,7 @@ def fill_categoria_cnh(categoria):
     fill_field('.formGroup [name="documents.cnh.category"]', categoria)
 
 
-def fill_data_emissão_cnh(data):
+def fill_data_emissao_cnh(data):
     driver.find_element_by_css_selector(
         '.ant-calendar-picker-input.ant-input[name="documents.cnh.issue_date"]'
     ).click()
@@ -228,3 +228,43 @@ def select_operadora_cp(css_selector, operadora):
     combobox_element = driver.find_element_by_css_selector(css_selector)
     combobox = Select(combobox_element)
     combobox.select_by_visible_text(operadora)
+
+# Contatos de referencia
+
+def btn_adicionar_tel_ref(btn_css_selector):
+    driver.find_element_by_css_selector(btn_css_selector).click()
+
+
+def select_tipo_referencia(btn_css_selector, combo_css_selector, tipo_ref):
+    btn_adicionar_tel_ref(btn_css_selector)
+    combobox_element = driver.find_element_by_css_selector(combo_css_selector)
+    combobox = Select(combobox_element)
+    combobox.select_by_visible_text(tipo_ref)
+
+
+def select_tipo_tel_ref(tel_css_selector, tipo_tel):
+    combobox_element = driver.find_element_by_css_selector(tel_css_selector)
+    combobox = Select(combobox_element)
+    combobox.select_by_visible_text(tipo_tel)
+
+
+def fill_ddd_ref(ddd_css_selector, ddd):
+    driver.find_element_by_css_selector(ddd_css_selector).send_keys(ddd)
+
+
+def fill_tel_ref(tel_css_selector, tel):
+    driver.find_element_by_css_selector(tel_css_selector).send_keys(tel)
+
+
+def select_operadora_ref(operadora_css_selector, operadora):
+    combobox_element = driver.find_element_by_css_selector(operadora_css_selector)
+    combobox = Select(combobox_element)
+    combobox.select_by_visible_text(operadora)
+
+
+def fill_nome_contato_ref(css_selector, nome):
+    fill_field(css_selector, nome)
+
+
+def fill_nome_empresa_ref(css_selector, empresa):
+    fill_field(css_selector, empresa)

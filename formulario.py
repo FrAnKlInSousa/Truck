@@ -25,7 +25,7 @@ def preenche_documentos():
 def preenche_cnh():
     page_formulario.fill_cnh("123321123")
     page_formulario.fill_categoria_cnh("AB")
-    page_formulario.fill_data_emissão_cnh("13/04/1989")
+    page_formulario.fill_data_emissao_cnh("13/04/1989")
     page_formulario.fill_data_expiracao_cnh("14/04/1989")
     page_formulario.fill_orgao_expedidor_cnh("DETRAN")
     page_formulario.select_estado_expedidor_cnh("SP")
@@ -74,3 +74,22 @@ def preenche_dados_pessoais():
     page_formulario.fill_tel_cp(tel_contato2, "922224444")
     page_formulario.select_operadora_cp(operadora_contato2, "Vivo")
     page_formulario.set_whatsapp(whatsapp_contato2)
+
+
+def preenche_contatos_ref():
+    btn_add_tel_ref1 = '#form-driver > div:nth-child(2) > div > div:nth-child(3) > div > div > div > div > div > div > button'
+    tipo_ref1 = '#form-driver > div:nth-child(2) > div > div:nth-child(3) > div > div > div > div.ant-row.rowPhones > div.ant-col.ant-col-xs-24.ant-col-sm-24.ant-col-md-12.ant-col-lg-6.ant-col-xl-4 > div > select'
+    tipo_tel1 = '#form-driver > div:nth-child(2) > div > div:nth-child(3) > div > div > div > div.ant-row.rowPhones > div:nth-child(2) > div > select'
+    ddd1 = '.formGroup [name="contacts.phone_reference[0].area_code"]'
+    tel1 = '.formGroup [name="contacts.phone_reference[0].number"]'
+    operadora1 = '#form-driver > div:nth-child(2) > div > div:nth-child(3) > div > div > div > div.ant-row.rowPhones > div:nth-child(5) > div > select'
+    contato1 = '.formGroup [name="contacts.phone_reference[0].contact"]'
+    empresa1 = '.formGroup [name="contacts.phone_reference[0].company"]'
+
+    page_formulario.select_tipo_referencia(btn_add_tel_ref1, tipo_ref1, 'Pessoal')
+    page_formulario.select_tipo_tel_ref(tipo_tel1, 'Celular')
+    page_formulario.fill_ddd_ref(ddd1, '11')
+    page_formulario.fill_tel_ref(tel1, '993217290')
+    page_formulario.select_operadora_ref(operadora1, 'Oi')
+    page_formulario.fill_nome_contato_ref(contato1, 'Franklin Sousa')
+    page_formulario.fill_nome_empresa_ref(empresa1, 'TruckPad')
