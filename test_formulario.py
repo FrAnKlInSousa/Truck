@@ -28,3 +28,7 @@ def test_add_contatos_pessoais():
 
 def test_add_contatos_ref():
     formulario.preenche_contatos_ref()
+
+
+def test_add_dados_pagamento():
+    formulario.preenche_dados_pagamento()

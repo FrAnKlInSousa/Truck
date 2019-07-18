@@ -268,3 +268,36 @@ def fill_nome_contato_ref(css_selector, nome):
 
 def fill_nome_empresa_ref(css_selector, empresa):
     fill_field(css_selector, empresa)
+
+
+# Dados para pagamentos
+
+def btn_add_pagamento(btn_css_selector):
+    driver.find_element_by_css_selector(btn_css_selector).click()
+
+
+def fill_nome_pagamento(btn_css_selector, nome_css_selector, nome):
+    btn_add_pagamento(btn_css_selector)
+    fill_field(nome_css_selector, nome)
+
+
+def fill_cpf_pagamento(cpf_css_selector, cpf):
+    fill_field(cpf_css_selector, cpf)
+
+
+def fill_banco_pagamento(banco_css_selector, banco):
+    fill_field(banco_css_selector, banco)
+
+
+def fill_agencia_pagamento(agencia_css_selector, agencia):
+    fill_field(agencia_css_selector, agencia)
+
+
+def fill_conta_pagamento(conta_css_selector, conta):
+    fill_field(conta_css_selector, conta)
+
+
+def select_tipo_conta_pagamento(tipo_conta_css_selector, tipo):
+    combobox_element = driver.find_element_by_css_selector(tipo_conta_css_selector)
+    combobox = Select(combobox_element)
+    combobox.select_by_visible_text(tipo)
